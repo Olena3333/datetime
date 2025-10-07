@@ -17,8 +17,12 @@ calculate_person_age("2000-01-01") #25
 calculate_person_age("2025-10-10") #25
 
 def get_days_from_today(date_str: str)-> int:
-    date = datetime.strptime(date_str, "%Y-%m-%d") #str parse time
-    today = datetime.today()
-    resalt=2
+    date = datetime.strptime(date_str, "%Y-%m-%d").date() #str parse date
+    print (date)
+    today = datetime.today().date()
+    print(today)
+    resalt= (today - date).days
+    print(resalt)
     return resalt
 get_days_from_today('2020-10-09')
+get_days_from_today('2025-12-12')
