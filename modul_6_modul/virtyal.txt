@@ -1,0 +1,16 @@
+python3 -m venv .venv
+source .venv/bin/activate
+
+
+.gitignore
+.venv/
+.vscode/
+__pycache__/
+
+pip install colorama
+
+pip list
+pip freeze
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
